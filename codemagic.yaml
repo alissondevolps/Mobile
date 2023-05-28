@@ -1,0 +1,48 @@
+workflows:
+  main:
+    name: Build and Deploy
+    environment:
+      vars:
+        - REACT_NATIVE_VERSION: 0.63.4  # Versão do React Native a ser utilizada
+
+    scripts:
+      # Instalação de dependências
+      - name: Install dependencies
+        script: |
+          yarn install
+
+      # Build para iOS
+      - name: Build iOS
+        script: |
+          cd ios
+          pod install
+          xcodebuild -workspace YourApp.xcworkspace -scheme YourApp -configuration Release -quiet
+
+      # Build para Android
+      - name: Build Android
+        script: |
+          cd app
+          ./gradlew assembleRelease -quiet
+
+      # Testes
+      - name: Run tests
+        script: |
+          yarn test
+
+      # Gerar APK de distribuição
+      - name: Generate APK
+        script: |
+          cd app
+          ./gradlew assembleRelease -quiet
+
+    artifacts:
+      # Arquivos a serem salvos como artefatos
+      - app-release.apk
+      - YourApp.ipa
+
+    publishing:
+      # Publicação dos artefatos gerados
+      email:
+        recipients:
+          - your-email@example.com
+
