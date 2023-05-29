@@ -23,7 +23,7 @@ workflows:
       - name: Generate APK
         script: |
           cd android
-          ./gradlew assembleRelease -quiet
+         # ./gradlew assembleRelease -quiet
 
     artifacts:
       # Arquivos a serem salvos como artefatos
