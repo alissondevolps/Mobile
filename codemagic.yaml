@@ -1,9 +1,9 @@
 workflows:
   main:
     name: Build and Deploy
-    environment:
-      vars:
-        - REACT_NATIVE_VERSION: 0.63.4  # Versão do React Native a ser utilizada
+    #environment:
+    #  vars:
+    #    - REACT_NATIVE_VERSION: 0.63.4  # Versão do React Native a ser utilizada
 
     scripts:
       # Instalação de dependências
