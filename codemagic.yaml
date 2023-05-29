@@ -22,7 +22,7 @@ workflows:
       - name: Build Android
         script: |
           cd app
-          ./gradlew assembleRelease -quiet
+        #  ./gradlew assembleRelease -quiet
 
       # Testes
       - name: Run tests
@@ -33,7 +33,7 @@ workflows:
       - name: Generate APK
         script: |
           cd app
-          ./gradlew assembleRelease -quiet
+        #  ./gradlew assembleRelease -quiet
 
     artifacts:
       # Arquivos a serem salvos como artefatos
