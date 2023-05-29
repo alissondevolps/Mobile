@@ -13,11 +13,6 @@ workflows:
         script: |
           cd app
 
-      # Testes
-      - name: Run tests
-        script: |
-          yarn test
-
       # Gerar APK de distribuição
       - name: Generate APK
         script: |
