@@ -12,7 +12,7 @@ workflows:
       - name: Build Android
         script: |
           cd Mobile.Dev
-          ./gradlew assembleRelease -quiet
+        #  ./gradlew assembleRelease -quiet
 
       # Testes
       - name: Run tests
