@@ -7,7 +7,6 @@ workflows:
       - name: Install dependencies
         script: |
           yarn install
-          expo start --android
 
       # Build para Android
       - name: Build Android
@@ -29,4 +28,4 @@ workflows:
       # Publicação dos artefatos gerados
       email:
         recipients:
-          - your-email@example.com
+          - alissonferreira.brisanet@gmail.com
