@@ -8,13 +8,6 @@ workflows:
         script: |
           yarn install
 
-      # Build para iOS
-      - name: Build iOS
-        script: |
-          cd ios
-          pod install
-          xcodebuild -workspace Mobile.Dev.xcworkspace -scheme Mobile.Dev -configuration Release -quiet
-
       # Build para Android
       - name: Build Android
         script: |
