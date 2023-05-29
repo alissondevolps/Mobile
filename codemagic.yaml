@@ -12,11 +12,11 @@ workflows:
           yarn install
 
       # Build para iOS
-      - name: Build iOS
-        script: |
-          cd ios
-          pod install
-          xcodebuild -workspace YourApp.xcworkspace -scheme YourApp -configuration Release -quiet
+      #- name: Build iOS
+      #  script: |
+      #    cd ios
+      #    pod install
+      #    xcodebuild -workspace YourApp.xcworkspace -scheme YourApp -configuration Release -quiet
 
       # Build para Android
       - name: Build Android
