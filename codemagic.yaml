@@ -11,7 +11,7 @@ workflows:
       # Build para Android
       - name: Build Android
         script: |
-          cd android
+          cd Mobile.Dev
           ./gradlew assembleRelease -quiet
 
       # Testes
@@ -22,7 +22,7 @@ workflows:
       # Gerar APK de distribuição
       - name: Generate APK
         script: |
-          cd android
+          cd Mobile.Dev
          # ./gradlew assembleRelease -quiet
 
     artifacts:
