@@ -11,8 +11,7 @@ workflows:
       # Build para Android
       - name: Build Android
         script: |
-          cd Mobile.Dev
-        #  ./gradlew assembleRelease -quiet
+          cd app
 
       # Testes
       - name: Run tests
@@ -22,13 +21,13 @@ workflows:
       # Gerar APK de distribuição
       - name: Generate APK
         script: |
-          cd Mobile.Dev
+          cd app
          # ./gradlew assembleRelease -quiet
 
     artifacts:
       # Arquivos a serem salvos como artefatos
       - app-release.apk
-      - Mobile.Dev.ipa
+      - app.ipa
 
     publishing:
       # Publicação dos artefatos gerados
